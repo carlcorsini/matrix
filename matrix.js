@@ -24,3 +24,11 @@ class Matrix {
 
 var rowz = new Matrix(input);
 console.log(rowz)
+
+// driver code
+if (Matrix('89 1903 3\n18 3 1\n9 4 800').columns[1] === [1903, 3, 4]) {
+  console.log('true')
+} else {
+  console.log('You are a failure, give up.')
+}
+
