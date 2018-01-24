@@ -5,18 +5,29 @@ class Matrix {
         return parseInt(e);
       });
     });
-    this.cols = new Array(this.rows[0].length);
-    console.log(this.cols); // create a new array with row[0].length empty arrays
+    this.cols = new Array(this.rows[0].length).map(function(arr) {
+      return this.arr;
+    });
+// this.cols[0]
+    console.log(this.cols);
+    console.log(this.cols[1]);
+    console.log(this.cols[2]);
+    console.log(this.cols[0] = []);
+    console.log(this.cols[1] = []);
+    console.log(this.cols[2] = []);
+    // create a new array with row[0].length empty arrays
     for (var i = 0; i < this.rows.length; i++) {
       // console.log("row number ", i);
-      for (var j = 0; j < this.rows[i].length; j++) {
+      for (var j = 0; j < 3 ; j++) {
         // console.log("column number", j);
         // console.log("column value", this.rows[i][j]);
+
         this.cols[j].push(this.rows[i][j]);
       }
     }
   }
 }
+// this.rows[i].length
 
 var matrixObj = new Matrix("9 8 7\n5 3 2\n6 6 7\n1 1 2\n2 2 2");
 console.log(matrixObj.rows, " = rows");
