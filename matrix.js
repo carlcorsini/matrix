@@ -1,3 +1,31 @@
+class Matrix {
+  constructor(str) {
+    this.rows = str.split('\n').map(function(arr) {
+      return arr.split(' ').map(function(e) {
+        return parseInt(e);
+      });
+    });
+    this.cols = []; // create a new array with row[0].lentgth empty arrays
+    for (var i = 0; i < this.rows.length; i++) {
+      console.log("row number ", i);
+      for (var j = 0; j < this.rows[i].length; j++) {
+        console.log("column number", j);
+        console.log("column value", this.rows[i][j]);
+        // this.cols[j].push(this.rows[i][j]);
+      }
+    }
+  }
+}
+
+var matrixObj = new Matrix("9 8 7\n5 3 2\n6 6 7\n1 1 2\n2 2 2");
+console.log(matrixObj);
+// console.log(matrixObj.rows[0]);
+// console.log(matrixObj.rows[0][1]);
+// console.log(matrixObj.rows.length);
+console.log(matrixObj.cols);
+
+
+
 //PSEUDO
 //input "string"
 //output rows key: string, columns key: string
@@ -44,6 +72,8 @@
 // }
 // return array;
 // }
+
+
 
 
 console.log(matrix('1 2\n10 20'));
