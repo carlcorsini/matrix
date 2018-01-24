@@ -5,20 +5,22 @@ class Matrix {
         return parseInt(e);
       });
     });
-    this.cols = []; // create a new array with row[0].lentgth empty arrays
+    this.cols = new Array(this.rows[0].length);
+    console.log(this.cols); // create a new array with row[0].length empty arrays
     for (var i = 0; i < this.rows.length; i++) {
-      console.log("row number ", i);
+      // console.log("row number ", i);
       for (var j = 0; j < this.rows[i].length; j++) {
-        console.log("column number", j);
-        console.log("column value", this.rows[i][j]);
-        // this.cols[j].push(this.rows[i][j]);
+        // console.log("column number", j);
+        // console.log("column value", this.rows[i][j]);
+        this.cols[j].push(this.rows[i][j]);
       }
     }
   }
 }
 
 var matrixObj = new Matrix("9 8 7\n5 3 2\n6 6 7\n1 1 2\n2 2 2");
-console.log(matrixObj);
+console.log(matrixObj.rows, " = rows");
+console.log(matrixObj.cols, " = cols");
 // console.log(matrixObj.rows[0]);
 // console.log(matrixObj.rows[0][1]);
 // console.log(matrixObj.rows.length);
@@ -56,7 +58,6 @@ console.log(matrixObj.cols);
 
 
 
-
 // function matrix(input) {
 //   var j = 0;
 //   var array = [];
@@ -76,4 +77,4 @@ console.log(matrixObj.cols);
 
 
 
-console.log(matrix('1 2\n10 20'));
+// console.log(matrix('1 2\n10 20'));
