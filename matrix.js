@@ -5,10 +5,12 @@ class Matrix {
         return parseInt(e);
       });
     });
-    this.cols = new Array(this.rows[0].length);
-    for (var k = 0; k < this.cols.length; k++) {
-      this.cols[k] = [];
-    }
+    this.cols = new Array(this.rows[0].length).fill().map(function() {
+    return [];
+  });
+    // for (var k = 0; k < this.cols.length; k++) {
+    //   this.cols[k] = [];
+    // }
 
 
 // this.cols[0]
@@ -21,7 +23,7 @@ class Matrix {
     // create a new array with row[0].length empty arrays
     for (var i = 0; i < this.rows.length; i++) {
       // console.log("row number ", i);
-      for (var j = 0; j < 3 ; j++) {
+      for (var j = 0; j < this.rows[i].length; j++) {
         // console.log("column number", j);
         // console.log("column value", this.rows[i][j]);
 
@@ -38,7 +40,7 @@ console.log(matrixObj.cols, " = cols");
 // console.log(matrixObj.rows[0]);
 // console.log(matrixObj.rows[0][1]);
 // console.log(matrixObj.rows.length);
-console.log(matrixObj.cols);
+// console.log(matrixObj.cols);
 
 
 
