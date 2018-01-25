@@ -5,16 +5,19 @@ class Matrix {
         return parseInt(e);
       });
     });
-    this.cols = new Array(this.rows[0].length).map(function(arr) {
-      return this.arr;
-    });
+    this.cols = new Array(this.rows[0].length);
+    for (var k = 0; k < this.cols.length; k++) {
+      this.cols[k] = [];
+    }
+
+
 // this.cols[0]
     console.log(this.cols);
     console.log(this.cols[1]);
     console.log(this.cols[2]);
-    console.log(this.cols[0] = []);
-    console.log(this.cols[1] = []);
-    console.log(this.cols[2] = []);
+    // console.log(this.cols[0] = []);
+    // console.log(this.cols[1] = []);
+    // console.log(this.cols[2] = []);
     // create a new array with row[0].length empty arrays
     for (var i = 0; i < this.rows.length; i++) {
       // console.log("row number ", i);
